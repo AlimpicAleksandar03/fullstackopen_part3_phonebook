@@ -38,7 +38,7 @@ let persons = [
 app.get("/api/persons", (req, resp) => {
     resp.send(persons);
 });
-app.get("/info", (req, resp) => {
+app.get("/", (req, resp) => {
     resp.send(`
         <p>Phone book has info for ${persons.length} people</p>
         <p>${new Date()}</p>
@@ -77,5 +77,5 @@ app.post("/api/persons", (req, resp) => {
 const generateId = () => {
     return Math.round(Math.random() * 100000);
 };
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT);
