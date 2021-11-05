@@ -36,7 +36,7 @@ let persons = [
 ];
 
 app.get("/", (req, resp) => {
-    response.send(`<h1>Hello Wolrd!</h1>`);
+    resp.send(`<h1>Hello Wolrd!</h1>`);
 });
 app.get("/api/persons", (req, resp) => {
     resp.send(persons);
