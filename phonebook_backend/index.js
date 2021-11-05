@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const cors = require("cors");
 app.use(cors());
 app.use(express.json());
+app.use(express.static("build"));
+
 app.use(
     morgan((tokens, req, resp) => {
         console.log("METHOD: ", req.method);
