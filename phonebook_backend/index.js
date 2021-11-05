@@ -82,5 +82,5 @@ app.post("/api/persons", (req, resp) => {
 const generateId = () => {
     return Math.round(Math.random() * 100000);
 };
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001;
 app.listen(PORT);
